@@ -1,506 +1,11 @@
-exports.noAbsen = () =>{
-return `❌ Tidak ada absen berlangsung di group ini !`
-}
-exports.StartAbsen = () =>{
-	return`Mulai Absen`
-	}
-exports.DahAbsen = () =>{
-	return`Kamu sudah absen`
-	}
-exports.DelAbsen = () =>{
-	return`✅ Berhasil menghapus absen di group ini`
-	}
-exports.adaAbsen = () =>{
-	return`Masih ada sesi absen di group ini !`
-	}
-exports.SAbsen = () =>{
-	return`Absen dimulai`
-	}
-//
-exports.SetCmd = (prefix, command) =>{
-	return`Reply stiker!!\nExample : ${prefix + command} menu\n\n\n*Note : Tidak dapat disertai Prefix!!*`
-	}
-exports.CmdApa = () =>{
-	return`Untuk Command Apa?`
-	}
-exports.UCmd = () =>{
-	return`Anda tidak memiliki izin untuk mengubah perintah stiker ini`
-	}
-exports.HashCmd = () =>{
-	return`Tidak ada hash`
-	}
-exports.DelCmd = () =>{
-	return`✅ Sticker cmd telah di hapus`
-	}
-exports.LockCmd = () =>{
-	return`Reply pesan`
-	}
-exports.NoCmd = () =>{
-	return`Hash tidak ditemukan di database`
-	}
-exports.ReplyMsg = () =>{
-	return`Reply Message Yang Ingin Disave Di Database`
-	}
-exports.NoMsg = (prefix, command) =>{
-	return`Example : ${prefix + command} nama file`
-	}
-exports.AdMsg = (text) => {
-    return `'${text}' telah terdaftar di list pesan`
-}
-exports.DoneMsg = (prefix, text) => {
-    return `Berhasil menambahkan pesan di list pesan sebagai '${text}'
-    
-Akses dengan ${prefix}getmsg ${text}
-Lihat list Pesan Dengan ${prefix}listmsg`
-}
-exports.GetMsg = (prefix, command) => {
-    return `Example : ${prefix + command} file name\n\nLihat list pesan dengan ${prefix}listmsg`
-}
-exports.NoInMsg = (text) => {
-    return `'${text}' tidak terdaftar di list pesan`
-}
-exports.DelMsg = (text) => {
-    return `Berhasil menghapus '${text}' dari list pesan`
-}
-
-exports.OnBef = () => {
-    return `Sudah di aktifkan sebelumnya`
-}
-exports.OffYaBef = () => {
-    return `Sudah di nonaktifkan sebelumnya`
-}
-exports.OkOn = (command) => {
-    return `${command} Berhasil Di Aktifkan !`
-}
-exports.OffBef = (command) => {
-    return `${command} Berhasil Di Nonaktifkan !`
-}
-exports.OkMute = () => {
-    return `Bot Telah Di Mute Di Group Ini`
-}
-exports.OkUnMute = () => {
-    return `Bot Berhasil Di UnMute`
-}
-exports.OkUnBanC = () => {
-    return `Bot Berhasil Di unban chat`
-}
-exports.NoMute = () => {
-    return `Bot belum di ban dalam group ini`
-}
-
-exports.NoMsgBot = () => {
-    return `Pesan tersebut bukan dikirim oleh bot!`
-}
-exports.ToimgErr = () => {
-    return `Maaf Saat Ini Belum Support Sticker Gif`
-}
-exports.NoToImg = (prefix, command) => {
-    return `Reply Sticker Dengan Caption *${prefix + command}*`
-}
-exports.BotPublic = () => {
-    return `Sukses Ganti Ke Mode Public`
-}
-exports.BotSelf = () => {
-    return `Sukses Ganti Ke Mode Self\n\nUntuk mengubah ke mode public silahkan gunakan nomor bot`
-}
-exports.NoToStik = (prefix, command) => {
-    return `Kirim/Reply Gambar/Video Dengan Caption ${prefix + command}\n\nDurasi Sticker Video 1-9 Detik`
-}
-exports.NoPpBot = (prefix, command) => {
-    return `Kirim/Reply Image Dengan Caption ${prefix + command}`
-}
-exports.ToAud = (prefix, command) => {
-    return `Kirim/Reply Video/Audio Yang Ingin Dijadikan Audio Dengan Caption ${prefix + command}`
-}
-exports.ToMp3 = (prefix, command) => {
-    return `Kirim/Reply Video/Audio Yang Ingin Dijadikan MP3 Dengan Caption ${prefix + command}`
-}
-exports.ToVn= (prefix, command) => {
-    return `Reply Video/Audio Yang Ingin Dijadikan VN Dengan Caption ${prefix + command}`
-}
-exports.NoQouted = () => {
-    return `Pesan Yang anda reply tidak mengandung reply`
-}
-exports.SetGcName = (prefix, command) => {
-    return `Kirim perintah ${prefix + command} *teks*`
-}
-exports.SetPpGc = (prefix, command) => {
-    return `Kirim/Reply Image Dengan Caption ${prefix + command}`
-}
-exports.JoinGc = () => {
-    return `Masukkan Link Group!`
-}
-exports.MauKick = () => {
-    return `Kirim nomer/tag/reply target yang ingin di kick !`
-}
-exports.MauAdd = () => {
-    return `Kirim nomer/tag/reply target yang ingin di add !`
-}
-exports.NakPm= () => {
-    return `Kirim nomer/tag/reply target yang ingin di promote !`
-}
-exports.NakDm = () => {
-    return `Kirim nomer/tag/reply target yang ingin di demote !`
-}
-exports.Family = () => {
-    return `Masih Ada Sesi Yang Belum Diselesaikan!`
-}
-exports.NoWm = (prefix, command) => {
-    return `Kirim perintah ${prefix + command} packname|author`
-}
-exports.DoneExif = (packname, author) => {
-    return `Exif Berhasil Diubah Menjadi\n\nPackname : ${packname}\nAuthor : ${author}`
-}
-exports.NoTeksOne = (prefix, command) => {
-    return `Kirim perintah ${prefix + command} *teks*\n\nExp : ${prefix + command} WhatsApp Bot`
-}
-exports.NoTeksTwo = (prefix, command) => {
-    return `Kirim perintah ${prefix + command} *teks 1|teks 2*\n\nExp : ${prefix + command} WhatsApp|Bot`
-}
-exports.OffNsfw = () => {
-    return `Fitur nsfw belum di aktifkan`
-}
-exports.CoverBanLol = (prefix, command) => {
-    return `Ex: ${prefix + command} nama|heroes\nUsage: ${prefix + command} zeeone|jinx7`
-}
-exports.coverbannerlol = (style) => {
-    return `*Heroes Yg Kamu Masukkan Salah*\n\n_Berikut list heroes yg benar, Total_ *${style}* _heroes_\n\n`
-}
-exports.pubglogomaker = (prefix, command) => {
-    return `Ex: ${prefix + command} nama|style\nUsage: ${prefix + command} zeeone|women`
-}
-exports.pubglogomaker_ = (style) => {
-    return `*Style Yg Kamu Masukkan Salah*\n\n_Berikut list style yg benar, Total_ *${style}* _style_\n\n`
-}
-exports.colorfulpubg = (prefix, command) => {
-    return `Ex: ${prefix + command} nama|color\nUsage: ${prefix + command} zeeone|gold`
-}
-exports.colorfulpubg_ = (style) => {
-    return `*Color Yg Kamu Masukkan Salah*\n\n_Berikut list color yg benar, Total_ *${style}* _color_\n\n`
-}
-exports.astronotspace = (prefix, command) => {
-    return `Ex: ${prefix + command} nama|style\nUsage: ${prefix + command} zeeone|anubis`
-}
-exports.wallpaperaov = (prefix, command) => {
-    return `Ex: ${prefix + command} nama|heroes\nUsage: ${prefix + command} zeeone|allain`
-}
-exports.maketeamlogo = (style, style2, prefix, command) => {
-    return `Ex: ${prefix + command} nama|${style}\nUsage: ${prefix + command} zeeone|${style2}`
-}
-
-exports.MaketeamlogoT = (a, b, c, d, e, f, g, h) => {
-    return `Ex: ${g + h} ${a}|${b}|${c}\nUsage: ${g + h} ${e}|${f}|${d}`
-}
-exports.maketeamlogo_ = (style, style2) => {
-    return `*${style2} Yg Kamu Masukkan Salah*\n\n_Berikut List ${style2} Yg Benar, Total_ *${style}* _${style2}_\n\n`
-}
-
-exports.KisahNabi = (prefix, command, style) => {
-    return `Exp : ${prefix + command} ${style}`
-}
-exports.quran2 = (prefix, command, juz , brp) => {
-    return `Exp : ${prefix + command} ${juz}\nUsage: ${prefix + command} ${brp}`
-}
-
-exports.quran3 = (prefix, command, surah , ayat, brp, brp2) => {
-return`Ex : ${prefix + command} ${surah}|${ayat}\nUsage: ${prefix + command} ${brp}|${brp2}`
-}
-
-exports.JwbErr = () => {
-    return `❌ Jawaban Salah`
-}
-
-exports.JwbTrue = (tebak) => {
-return`🎮 ${tebak} 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`
-}
-exports.TbGam = () => {
-    return `Tebak Gambar`
-}
-exports.TbKa = () => {
-    return `Tebak Kata`
-}
-exports.TbBe = () => {
-    return `Tebak Bendera`
-}
-exports.TbCak = () => {
-    return `Cak Lontong`
-}
-exports.TbSu = () => {
-    return `Susun Kata`
-}
-exports.TbAt = () => {
-    return `Tebak Kalimat`
-}
-exports.TbSi = () => {
-    return `Tebak Siapa`
-}
-exports.Tbte = () => {
-    return `Teka Teki`
-}
-exports.TbEn = () => {
-    return `Tebak Kabupaten`
-}
-exports.TbKi = () => {
-    return `Tebak Kimia`
-}
-exports.TbLi = () => {
-    return `Tebak Lirik`
-}
-exports.TbKan = () => {
-    return `Tebak Tebakan`
-}
-
-exports.TbFamily = (soal, jawaban, find) => {
-    return `*Jawablah Pertanyaan Berikut :*\n${soal}\n\nTerdapat *${jawaban}* Jawaban ${find(v => v.includes(' ')) ? '(Beberapa Jawaban Terdapat Spasi)' : ''}`
-}
-
-exports.TbAfk = (nama, afk) => {
-    return `${nama} Telah Afk Dengan Alasan ${afk ? ': ' + afk : 'Nothing'}`
-}
-
-exports.TbGambar = (desk, time) => {
-    return `Silahkan Jawab Soal Di Atas Ini\n\nDeskripsi : ${desk}\nWaktu : ${time}`
-}
-exports.TbGambar_ = (jawaban) => {
-    return `Waktu Habis\nJawaban:  ${jawaban}`
-}
-exports.TbGambar__ = (jawaban, desk) => {
-    return `Waktu Habis\nJawaban:  ${jawaban}}\nDeskripsi : ${desk}`
-}
-exports.TbKata = (soal, time) => {
-    return `Silahkan Jawab Pertanyaan Berikut\n\n${soal}\nWaktu : ${time}`
-}
-exports.TbBendera = (time) => {
-    return `Silahkan Jawab Pertanyaan Diatas\n\nWaktu : ${time}`
-}
-exports.TbKabupaten = (time) => {
-    return `Gambar Diatas Adalah Gambar dari Kabupaten?\nWaktu : ${time}`
-}
-exports.TbKimia = (soal, time) => {
-    return `Apa Arti Dari Simbol : *${soal}*?\nWaktu : ${time}`
-}
-exports.TbLirik = (soal, time) => {
-    return `Ini Adalah Lirik Dari Lagu? : *${soal}*?\nWaktu : ${time}`
-}
-exports.TbSusun = (soal, tipe, time) => {
-    return `*Jawablah Pertanyaan Berikut :*\nSoal : ${soal}\nTipe : ${tipe}\nWaktu : ${time}`
-}
-exports.TbMath = (modes, prefix, command) => {
-    return `Mode: ${modes}\nContoh penggunaan: ${prefix + command} medium`
-}
-exports.TbMath_ = (soal, time) => {
-    return `*Berapa hasil dari: ${soal}*?\n\nWaktu: ${time} detik`
-}
-exports.TbJail = (prefix, command) => {
-    return `Kirim/Reply Foto/Sticker Dengan Caption ${prefix + command}`
-}
-exports.TbRepo = (prefix, command) => {
-    return `Kirim perintah ${prefix + command} *user* *repo* *branch*\n\nExp. ${prefix + command} *zeeone-ofc* *Alphabot-Md* *v12*`
-}
-exports.StalkIg = () => {
-    return `Masukkan username`
-}
-exports.Tomp4 = (prefix, command) => {
-    return `Reply stiker gif dengan caption ${prefix + command}`
-}
-exports.Tourl = (prefix, command) => {
-    return `Kirim/Reply Media Dengan Caption ${prefix + command}`
-}
-exports.Smeme = (prefix, command) => {
-    return `Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`
-}
-exports.Smeme_ = (prefix, command) => {
-    return `Kirim/Reply Foto Dengan Caption ${prefix + command} *teks|tesk2*`
-}
-exports.Bcall = (anu, time, chat) => {
-    return `Mengirim Broadcast Ke ${anu} ${chat}\nWaktu Selesai ${time * 1.5} detik`
-}
-exports.Stag = (prefix, command) => {
-    return `Reply sticker dengan caption ${prefix + command}`
-}
-exports.Vtag = (prefix, command, video) => {
-    return `Kirim/reply ${video} dengan caption ${prefix + command}`
-}
-exports.TrLate = (prefix, command) => {
-    return `Contoh :
-
-1. Kirim perintah ${prefix + command} *kode bahasa* *teks*
-	• Exp : ${prefix + command} id halo
-2. Reply chat dengan caption ${prefix + command} *kode bahasa*
-	• Exp : ${prefix + command} id halo
-Daftar bahasa yang di dukung : https://cloud.google.com/translate/docs/languages`
-}
-exports.Addlist = () => {
-    return `Key tidak boleh sama dengan fitur / command bot`
-}
-exports.Addlist_ = (prefix, command) => {
-    return `Gunakan dengan cara ${prefix + command} *key|response*\n\n_Contoh_\n\n${prefix + command} Hi|Halo`
-}
-exports.Addlist__ = (arg) => {
-    return `List respon dengan key : *${arg}* sudah ada di group ini.`
-}
-exports.AddlistDone = (arg) => {
-    return `Sukses set list message dengan key : *${arg}*`
-}
-exports.Dellist = () => {
-    return `Belum ada list message di database`
-}
-exports.Dellist_  = (prefix, command) => {
-    return `Gunakan dengan cara ${prefix + command} *key*\n\n_Contoh_\n\n${prefix + command} Hi`
-}
-exports.Dellist__ = (key) => {
-    return `List respon dengan key *${key}* tidak ada di database!`
-}
-exports.DellistDone = (key) => {
-    return `Sukses delete list message dengan key *${key}*`
-}
-exports.ListUp = (key) => {
-    return `Maaf, untuk key *${key}* belum terdaftar di group ini`
-}
-exports.UpList = (key) => {
-    return `Sukses update list message dengan key : *${args1}*`
-}
-exports.Anonymous = (pushname, prefix) => {
-    return `Hai ${pushname} Selamat Datang di Anonymous Chat\n\nKetik ${prefix}start untuk mencari Teman Chat anda, atau bisa pencet tombol Search dibawah`
-}
-exports.Anon = () => {
-    return `Cari Teman Chat`
-}
-exports.StopAnon = () => {
-    return `Kamu Sedang Tidak Berada Di Sesi Anonymous, Tekan Button Untuk Mencari Partner `
-}
-exports.AnonNew = () => {
-    return `Cari Teman Baru`
-}
-exports.AnonDahStop = () => {
-    return `✅ Berhasil memberhentikan chat`
-}
-exports.StopAnonByFren = () => {
-    return `⚠️ Sesi chat ini telah diberhentikan oleh teman chat kamu`
-}
-exports.AnonOn = () => {
-    return `⚠️ Kamu masih dalam sesi chat dengan partner!`
-}
-exports.AnonFind = (prefix) => {
-    return `_Pasangan Ditemukan 🐼_\n${prefix}skip -- _cari pasangan baru_\n${prefix}stop -- _hentikan dialog ini_`
-}
-exports.AnonSearch = () => {
-    return `🔎 Mohon tunggu sedang mencari teman chat`
-}
-exports.NoAnon = () => {
-    return `⚠️ Kamu belum pernah memulai chat!`
-}
-
-exports.AllFitur = () => {
-    return `\n_Semua fitur bot_`
-}
-exports.InfoMenu = () => {
-    return `\n_Mencari informasi terkini melalui bot_`
-}
-exports.KhususOwn = () => {
-    return `\n_Fitur khusus owner bot_`
-}
-exports.DataBor = () => {
-    return `\n_Menyimpan sesuatu di database bot_`
-}
-exports.MenuGc = () => {
-    return `\n_Menampilkan fitur khusus group_`
-}
-exports.MenuAni = () => {
-    return `\n_Mencari random gambar anime_`
-}
-exports.TagMem = () => {
-    return `\n_Menandai member group_`
-}
-exports.StalkOrk = () => {
-    return `\n_Kepoin sosmed orang_`
-}
-exports.Hoja = () => {
-    return `\n_Mencari sesuatu yang gk penting_`
-}
-exports.CovertWi = () => {
-    return `\n_Mengkorversi sesuatu dengan bot_`
-}
-exports.AnuFoto = () => {
-    return `\n_Mengubah gambar jadi lebih menarik_`
-}
-exports.HajuStik = () => {
-    return `\n_Membuat stiker yang unik_`
-}
-exports.EloDown= () => {
-    return `\n_Menampilkan fitur download_`
-}
-exports.StikerWibu = () => {
-    return `\n_Random stiker anime_`
-}
-exports.ImageDewasa = () => {
-    return `\n_Random image anime 18+_`
-}
-exports.MakeLogo = () => {
-    return `\n_Untuk membuat logo menggunakan bot_`
-}
-exports.oterMenu = () => {
-    return `\n_Menu lainnya_`
-}
-exports.GameBot = () => {
-    return `\n_Fitur untuk bermain dengan bot_`
-}
-exports.RandRik = () => {
-    return `\n_Random video tiktok_`
-}
-exports.RandCew = () => {
-    return `\n_Random gambar cewe cantik_`
-}
-exports.RamalOi = () => {
-    return `\n_Ramalan masa kini_`
-}
-exports.TeleStik= () => {
-    return `\n_Random stiker dari telegram_`
-}
-exports.BuatLogoLagi = () => {
-    return `\n_Membuat logo keren dengan bot_`
-}
-exports.SoundNih= () => {
-    return `\n_Random sound_`
-}
-exports.KanLogoLagi = () => {
-    return `\n_Membuat logo menarik_`
-}
-exports.TobatBro = () => {
-    return `\n_Fitur islami_`
-}
-exports.MauJualan = () => {
-    return `\n_Fitur untuk berjualan_`
-}
-exports.GadaChat = () => {
-    return `\n_Fitur untuk melakukan chat random_`
-}
-exports.SumberBot = () => {
-    return `\n_Sumber script bot ini_`
-}
-exports.Tqnya = () => {
-    return `\n_Siapa aja yang berkontribusi di dalam bot ini_`
-}
-exports.SetAh = () => {
-    return `Mau set menu ya ?`
-}
-exports.KickAh = (gc) => {
-    return `*Antilink Group Terdeteksi*\n\nKamu akan dikeluarkan dari group ${gc}`
-    }
-    exports.GjdKick = () => {
-    return `Sepertinya kamu mengirimkan link group ini, kamu tidak akan di keluarkan`
-    }
-/////////
-
-/////////
 exports.private = () =>{
 	return`Fitur hanya bisa di gunakan di private chat`
 	}
 exports.wait = () => {
-    return `⏳ Mohon tunggu sebentar`
+    return `⏳ Mohon tunggu sebentar~`
 }
 exports.ok = () => {
-    return `✅ Done.`
+    return `✅ Done. Ok desu~`
 }
 
 exports.err = () => {
@@ -623,7 +128,6 @@ exports.listMenu = (time, salam, pushname, prefix) => {
 ├ ${prefix}unbanchat
 ├ ${prefix}autorespond [on/off]
 ├ ${prefix}antiviewonce [on/off]
-├ ${prefix}autobio [on/off]
 ├ ${prefix}join [link]
 ├ ${prefix}self
 ├ ${prefix}public [only bot]
@@ -643,12 +147,6 @@ exports.listMenu = (time, salam, pushname, prefix) => {
 ├ ${prefix}kalkulator
 ├ ${prefix}proses
 ╰❒ ${prefix}done [surah|ayat]
-
-╭─❒ 「 Anonymous 」
-├ ${prefix}anonymous 
-├ ${prefix}start
-├ ${prefix}skip [daerah]
-╰❒ ${prefix}stop [surah|ayat]
 
 
 ╭─❒ 「 Database 」 
@@ -1298,156 +796,6 @@ exports.listMenu = (time, salam, pushname, prefix) => {
 ├ ${prefix}lisa  
 ╰❒ ${prefix}rose
 
-╭─❒ 「 Logo Menu 」
-├ ${prefix}coverbannerlol text|heroes
-├ ${prefix}pubglogomaker text|style
-├ ${prefix}colorfulpubg text|color
-├ ${prefix}astronotspace text|style
-├ ${prefix}wallpaperaov text|heroes
-├ ${prefix}maketeamlogo text|style
-├ ${prefix}circlemarcotteam text|logo
-├ ${prefix}wallpaperml text|heroes
-├ ${prefix}dragonballfb text|character
-├ ${prefix}bannerofaov text|character
-├ ${prefix}effect3donbeach text|background
-├ ${prefix}cutegirlgamer text|logo
-├ ${prefix}footballteam text|logo
-├ ${prefix}beautifulshimmering text|champion
-├ ${prefix}pubgcutelogo text|logo
-├ ${prefix}elegantrotation text|logo
-├ ${prefix}logogamingassasin text|logo
-├ ${prefix}introvideomaker text|logo
-├ ${prefix}gaminglogo4fvs text|logo
-├ ${prefix}blueneon text|logo
-├ ${prefix}metalmascot text|logo
-├ ${prefix}anonymous2 text|style
-├ ${prefix}lolpentakill text|style
-├ ${prefix}avatarleagueofking text|style
-├ ${prefix}avatarff text|character
-├ ${prefix}overwatchwallpaper text|character
-├ ${prefix}rovwallpaperhd text|hero
-├ ${prefix}rovwallpaper text|avatar
-├ ${prefix}beautifulgalaxylol text|style
-├ ${prefix}crossfirecover text|character
-├ ${prefix}lolwallpaper text|wallpaper
-├ ${prefix}coverdota2 text|heroes
-├ ${prefix}coverleagueofking text|character
-├ ${prefix}avatar3q360 text|avatar
-├ ${prefix}coverofwarface text|character
-├ ${prefix}newlolavatar text|avatar
-├ ${prefix}csgocover text|background
-├ ${prefix}coverloknew text|hero
-├ ${prefix}coverfblol text|letters
-├ ${prefix}overwatchcover text|hero
-├ ${prefix}crossfirestyle text|avatar
-├ ${prefix}avatarlolbyname text|style
-├ ${prefix}lolcoverbyname text|avatar
-├ ${prefix}cyberhunterfb text|character
-├ ${prefix}coverfreefirefb text|character
-├ ${prefix}gamingmascot text|style
-├ ${prefix}coveronepiecefb text|character
-├ ${prefix}bannerytcsgo text|banner
-├ ${prefix}fbgamepubgcover text|template
-├ ${prefix}banneroflol text|text2|banner
-├ ${prefix}bannerofaov2 text|text2|banner
-├ ${prefix}teamlogo text|text2|background
-├ ${prefix}companylogo2 text|text2|background
-├ ${prefix}companylogo text|text2|background
-├ ${prefix}gradientlogo text|text2|background
-├ ${prefix}pencilsketch text|text2|icon
-├ ${prefix}gunlogogaming text|text2|background
-├ ${prefix}banneroffreefire text|text2|background
-├ ${prefix}letterlogos text|text2|thumb
-├ ${prefix}bannerofoverwatch text|text2|background
-├ ${prefix}bannerofapex text|text2|background
-├ ${prefix}bannerofpubg text|text2|background
-├ ${prefix}mascotstyle text|text2|thumb
-├ ${prefix}logoaccording text|text2|thumb
-╰❒ ${prefix}avataroverwatch text|text2|thumb
-
-
-╭─❒ 「 Islamic Menu 」
-├ ${prefix}asmaulhusna
-├ ${prefix}kisahnabi [nabi]
-├ ${prefix}jadwalshalat [daerah]
-├ ${prefix}randomquran
-├ ${prefix}randomquran2
-├ ${prefix}listsurah
-├ ${prefix}tafsirsurah [surah]
-╰❒ ${prefix}alquranaudio [surah|ayat]
-
-╭─❒ 「 Sound Menu 」
-├ ${prefix}sound1
-├ ${prefix}sound2
-├ ${prefix}sound3
-├ ${prefix}sound4
-├ ${prefix}sound5
-├ ${prefix}sound6
-├ ${prefix}sound7
-├ ${prefix}sound8
-├ ${prefix}sound9
-├ ${prefix}sound10
-├ ${prefix}sound11
-├ ${prefix}sound12
-├ ${prefix}sound13
-├ ${prefix}sound14
-├ ${prefix}sound15
-├ ${prefix}sound16
-├ ${prefix}sound17
-├ ${prefix}sound18 
-├ ${prefix}sound19
-├ ${prefix}sound20
-├ ${prefix}sound21
-├ ${prefix}sound22
-├ ${prefix}sound23
-├ ${prefix}sound24
-├ ${prefix}sound25
-├ ${prefix}sound26
-├ ${prefix}sound27
-├ ${prefix}sound28
-├ ${prefix}sound29
-├ ${prefix}sound30
-├ ${prefix}sound31
-├ ${prefix}sound32
-├ ${prefix}sound33
-├ ${prefix}sound34
-├ ${prefix}sound35
-├ ${prefix}sound36
-├ ${prefix}sound37
-├ ${prefix}sound38
-├ ${prefix}sound39
-├ ${prefix}sound40
-├ ${prefix}sound41
-├ ${prefix}sound42
-├ ${prefix}sound43
-├ ${prefix}sound44
-├ ${prefix}sound45
-├ ${prefix}sound46
-├ ${prefix}sound47
-├ ${prefix}sound48
-├ ${prefix}sound49
-├ ${prefix}sound50
-├ ${prefix}sound51
-├ ${prefix}sound52
-├ ${prefix}sound53
-├ ${prefix}sound54
-├ ${prefix}sound55
-├ ${prefix}sound56
-├ ${prefix}sound57
-├ ${prefix}sound58
-├ ${prefix}sound59
-├ ${prefix}sound60
-├ ${prefix}sound61
-├ ${prefix}sound62
-├ ${prefix}sound63
-├ ${prefix}sound64
-├ ${prefix}sound65
-├ ${prefix}sound66
-├ ${prefix}sound67
-├ ${prefix}sound68
-├ ${prefix}sound69
-╰❒ ${prefix}sound70
-
 ╭─❒ 「 TqTo 」 
 ├ My God
 ├ My Parents
@@ -1468,26 +816,36 @@ exports.rules = (prefix) => {
 *── 「 RULES AND FAQ 」 ──*
 
 1. Jangan spam bot. 🙅
+Sanksi: *❎ WARN/SOFT BLOCK*
+
 2. Jangan telepon bot. ☎️
-3. Jangan membandingkan bot 👍
+Sanksi: *❎ SOFT BLOCK*
+
+3. Jangan mengeksploitasi bot.😖
+Sanksi: *PERMANENT BLOCK*
 
 🗯️ Bot tidak atau lambat merespon ?
-➡️ Mungkin dipengaruhi oleh jaringan, signal, banned oleh Whatsapp dan beberapa asalan.
+➡️ Mungkin dipengaruhi oleh jaringan, signal, banned oleh Whatsapp dan beberapa asalan. Tetap patuhi rules‼️
 
 🗯️ Dimana saya bisa mendapatkan Script dari bot ini ?
-➡️ Script ini bisa kalian dapatkan di YouTube ZEEONE OFC
+➡️ Script ini masih private dan tidak pernah diperjual belikan ,bijaklah dalam mengetahui penipu.
 
 🗯️ Boleh saya menambah ke grup?
-➡️ Untuk itu tergantung dari owner bot sendiri
+➡️ Untuk sementara bot dalam status free to add.
 
 🗯️ Prefixnya apa ya?
-➡️ Bot ini menggunakan multi prefix & bisa kamu gunakan tanpa prefix
+➡️ Bot ini menggunakan multi prefix. Berarti anda bisa menggunakan prefix #, . , Dan prefix wajar lainnya.
 
-Jika sudah dipahami rules-nya, silakan ketik *${prefix}menu* untuk memulai!
+🗯️ Kak, kok syaa chat owner tidak direspon?
+➡️ Owner hanya merespon pertanyaan seputar bot Dan kendala eror, tidak untuk kenalan ataupun mengemis script.
 
-⚠️ Segala kebijakan dan ketentuan bot dapat berubah kapan saja 
 
-Terimakasih! 
+Jika sudah dipahami rules-nya, silakan ketik *${prefix}allmenu* untuk memulai!
+
+⚠️ Segala kebijakan dan ketentuan Alphabot di pegang oleh owner dan segala perubahan kebijakan, sewaktu waktu owner berhak mencabut, memblokir user(*﹏*) 
+
+Arigatou Gozaimasu! Untuk kalian user ramah dan Beberapa orang yg ikut membantu juga dalam project pembuatan Alphabot
+😖🙏
 `
 }
 exports.welcome = () =>{
@@ -1505,9 +863,9 @@ Goodbye`
 }
 exports.source = () =>{
 return`*------「 SOURCE CODE 」 ------*
-
+-
 Base : https://github.com/DikaArdnt/Hisoka-Morou
-Recode : https://youtube.com/playlist?list=PLFCglBzFPHG7vSQaa9S3P8yfla_d9w-2-
+Recode : Nyari apa bang?
 `
 }
 exports.tos = (ownernomer) => {
@@ -1563,7 +921,6 @@ return`╭─❒ 「 Owner 」
 ├ ${prefix}unbanchat
 ├ ${prefix}autorespond [on/off]
 ├ ${prefix}antiviewonce [on/off]
-├ ${prefix}autobio [on/off]
 ├ ${prefix}join [link]
 ├ ${prefix}self
 ├ ${prefix}public [only bot]
@@ -2305,7 +1662,7 @@ exports.logomenu = (prefix) =>{
 ├ ${prefix}gaminglogo4fvs text|logo
 ├ ${prefix}blueneon text|logo
 ├ ${prefix}metalmascot text|logo
-├ ${prefix}anonymous2 text|style
+├ ${prefix}anonymous text|style
 ├ ${prefix}lolpentakill text|style
 ├ ${prefix}avatarleagueofking text|style
 ├ ${prefix}avatarff text|character
@@ -2362,14 +1719,6 @@ exports.islammenu = (prefix) =>{
 ├ ${prefix}listsurah
 ├ ${prefix}tafsirsurah [surah]
 ╰❒ ${prefix}alquranaudio [surah|ayat]
-`
-}
-exports.anonchat = (prefix) =>{
-	return`╭─❒ 「 Anonymous 」
-├ ${prefix}anonymous 
-├ ${prefix}start
-├ ${prefix}skip [daerah]
-╰❒ ${prefix}stop [surah|ayat]
 `
 }
 
